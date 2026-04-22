@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <title>Color</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <main>
       <a class="back-link" href="./index.html">Go back</a>
-      <section class="task welcome-task">
-        <h2>Welcome</h2>
-        <input class="user-name" type="text" placeholder="Ваше ім’я" />
-        <p class="welcome-message">Привіт, гість!</p>
+      <section class="task notifications-task">
+        <h2>Notifications</h2>
+        <label>
+          <input class="notifications-toggle" type="checkbox" />
+          Увімкнути сповіщення
+        </label>
+        <p class="notifications-status">Сповіщення вимкнені</p>
       </section>
     </main>
-    <script type="module" src="./welcome-task.js"></script>
+    <script type="module" src="./switch-task.js"></script>
   </body>
 </html>
