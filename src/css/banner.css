@@ -1,0 +1,22 @@
+.hint-banner {
+  margin-top: 24px;
+  background-color: aqua;
+  padding: 24px;
+  transition: transform 0.3s linear;
+}
+.hint-text {
+  font-size: 38px;
+}
+.hint-task {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: cadetblue;
+}
+html {
+  height: 100vh;
+}
+
+.hint-banner.hidden {
+  transform: translateX(-150%);
+}

@@ -4,4 +4,5 @@ export const STORAGE_KEYS = {
   COLOR_STATUS: 'color-status',
   CHECKBOX_NOTIFICATIONS: 'checkbox-notify',
   STATUS_NOTIFICATIONS: 'checkbox-status',
+  AGE_STATUS: 'user-age-status',
 };

@@ -1,7 +1,7 @@
 import { STORAGE_KEYS } from './constants';
 import { refs } from './refs';
-import { saveToLocalStorage } from './storage';
-
+import { getFromLocalStorage, saveToLocalStorage } from './storage';
+import * as basicLightbox from 'basiclightbox';
 export function onNameInput(event) {
   const userName = event.target.value.trim();
   refs.welcomeText.textContent = `Привіт, ${userName}`;
@@ -42,5 +42,44 @@ export function onNotificationsCheckbox(event) {
   saveToLocalStorage(
     STORAGE_KEYS.STATUS_NOTIFICATIONS,
     refs.notificationsStatus.textContent
+  );
+}
+
+export function onFirstLoad(event) {
+  const storageStatus = getFromLocalStorage(STORAGE_KEYS.AGE_STATUS);
+  if (storageStatus !== null) {
+    refs.ageStatus.textContent =
+      storageStatus === 'minor'
+        ? 'Статус: неповнолітній'
+        : `Статус: повнолітній`;
+    return;
+  }
+
+  const modal = basicLightbox.create(`<h2>Чи є вам 18?</h2>
+    <button class="yes-btn">Так</button>
+    <button class="no-btn">Ні</button>`);
+
+  modal.show();
+
+  const yesBtn = document.querySelector('.yes-btn');
+  const noBtn = document.querySelector('.no-btn');
+
+  yesBtn.addEventListener(
+    'click',
+    () => {
+      modal.close();
+      saveToLocalStorage(STORAGE_KEYS.AGE_STATUS, 'adult');
+      refs.ageStatus.textContent = `Статус: повнолітній`;
+    },
+    { once: true }
+  );
+  noBtn.addEventListener(
+    'click',
+    () => {
+      modal.close();
+      saveToLocalStorage(STORAGE_KEYS.AGE_STATUS, 'minor');
+      refs.ageStatus.textContent = 'Статус: неповнолітній';
+    },
+    { once: true }
   );
 }
