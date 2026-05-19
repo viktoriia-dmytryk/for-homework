@@ -1,0 +1,2 @@
+const e={welcomeText:document.querySelector(".welcome-message"),nameInput:document.querySelector(".user-name"),colorSelect:document.querySelector(".color-select"),colorStatus:document.querySelector(".color-status"),notificationsCheckbox:document.querySelector(".notifications-toggle"),notificationsStatus:document.querySelector(".notifications-status"),ageStatus:document.querySelector(".age-status"),timeClock:document.querySelector(".current-time"),hintBanner:document.querySelector(".hint-banner")};export{e as r};
+//# sourceMappingURL=refs-Dn69Qw1f.js.map

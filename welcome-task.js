@@ -1,2 +1,2 @@
-import{r as e}from"./assets/refs-Ceqw9bnK.js";/* empty css                      */import{i as t,o as n}from"./assets/handlers-5ZSFo9su.js";import"./assets/vendor-D_DEFc4h.js";document.addEventListener("DOMContentLoaded",t);e.nameInput.addEventListener("input",n);
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                      */import{i as t,o as e}from"./assets/handlers-BKac0IuM.js";import{r as n}from"./assets/refs-Dn69Qw1f.js";import"./assets/vendor-D_DEFc4h.js";document.addEventListener("DOMContentLoaded",t);n.nameInput.addEventListener("input",e);
 //# sourceMappingURL=welcome-task.js.map
